@@ -1,4 +1,6 @@
-def part1():
+# Ref: https://adventofcode.com/2015/day/5
+
+def part2():
 
     niceStrings = 0
 
@@ -7,43 +9,34 @@ def part1():
         for eachStr in lines:
             eachStr = eachStr.strip('\n')
 
-            if hasAtleast3Vowels(eachStr) and hasCharTwiceInARow(eachStr) and hasForbiddenStrings(eachStr):
+            hasALen3Palindrome(eachStr)
+
+            if hasNonOverlappingPairs(eachStr) and hasALen3Palindrome(eachStr):
                 niceStrings += 1
 
-        print(niceStrings)
+    return niceStrings
 
 
-def hasAtleast3Vowels(s):
+# It contains a pair of any two letters that appears at least twice in the string without overlapping, like xyxy (xy) or aabcdefgaa (aa), but not like aaa (aa, but it overlaps).
+def hasNonOverlappingPairs(s):
 
-    vowels = 'aeiou'
-    vowelsCount = 0
+    for i in range(len(s)-1):
+        for j in range(i+2, len(s)-1):
+            if s[i:i+2] == s[j:j+2]:
+                return True
 
-    for c in s:
-        if c in vowels:
-            vowelsCount += 1
-        if vowelsCount == 3:
+    return False
+
+
+# It contains at least one letter which repeats with exactly one letter between them, like xyx, abcdefeghi(efe), or even aaa. Basically a palindrome of length 3
+def hasALen3Palindrome(s):
+
+    for i in range(len(s)-2):
+        if s[i] == s[i+2]:
             return True
 
     return False
 
 
-def hasCharTwiceInARow(s):
-
-    for i in range(len(s)-1):
-        if s[i] == s[i+1]:
-            return True
-    return False
-
-
-def hasForbiddenStrings(s):
-
-    forbiddenStrings = ['ab', 'cd', 'pq', 'xy']
-    for i in range(len(s)-1):
-        if s[i:i+2] in forbiddenStrings:
-            return False
-
-    return True
-
-
-ans = part1()
+ans = part2()
 print(f'total nice strings based on the rules are: {ans}')

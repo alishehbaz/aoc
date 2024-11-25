@@ -1,3 +1,5 @@
+# Ref: https://adventofcode.com/2015/day/5
+
 def part1():
 
     niceStrings = 0
@@ -10,7 +12,7 @@ def part1():
             if hasAtleast3Vowels(eachStr) and hasCharTwiceInARow(eachStr) and hasForbiddenStrings(eachStr):
                 niceStrings += 1
 
-        print(niceStrings)
+    return niceStrings
 
 
 def hasAtleast3Vowels(s):
