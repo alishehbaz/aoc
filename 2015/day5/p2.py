@@ -8,9 +8,6 @@ def part2():
         lines = file.readlines()
         for eachStr in lines:
             eachStr = eachStr.strip('\n')
-
-            hasALen3Palindrome(eachStr)
-
             if hasNonOverlappingPairs(eachStr) and hasALen3Palindrome(eachStr):
                 niceStrings += 1
 
