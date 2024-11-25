@@ -1,4 +1,4 @@
-# Ref: https://adventofcode.com/2015/day/3
+# Ref: https://adventofcode.com/2015/day/2
 
 def part1():
 
