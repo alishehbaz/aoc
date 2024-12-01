@@ -1,5 +1,7 @@
 from collections import defaultdict
 
+# Ref: https://adventofcode.com/2022/day/1
+
 
 def p1():
 
