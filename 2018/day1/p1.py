@@ -3,11 +3,9 @@
 def p1():
     res = 0
     with open('input.txt') as f:
-        lines = [line.strip() for line in f]
-        for line in lines:
-            res += int(line)
-            
-    print(res)
+        res = sum([int(n) for n in [line.strip() for line in f]])
+    return res
 
 
-p1()
+ans = p1()
+print(f'final frequency is {ans}')
