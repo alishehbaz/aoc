@@ -1,4 +1,4 @@
-# Ref: https://adventofcode.com/2018/day/2
+# Ref: https://adventofcode.com/2018/day/1
 
 def p2():
     res = 0
