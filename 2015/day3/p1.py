@@ -1,3 +1,4 @@
+# INCOMPLETE
 def part1():
 
     stack = []
