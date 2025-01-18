@@ -1,5 +1,3 @@
-# INCOMPLETE
-
 from p1 import p1
 
 testCases = [
@@ -10,8 +8,10 @@ testCases = [
 ]
 
 with open("testInput.txt") as f:
-    for i, line in enumerate(f.readlines(), start=1):
-        print(f'test: {i}')
-        instructionSet = line.strip().split(',')
-        print(f"expected : {testCases[i]}")
-        print(f"actual: {p1(instructionSet)}")
+    for i, line in enumerate(f.readlines()):
+        instructionSet = [int(line) for line in line.strip().split(',')]
+        if testCases[i] == p1(instructionSet):
+            print(f'TESTCASE: {i+1} PASSED')
+        else:
+            print(f'TESTCASE: {i+1} FAILED')
+        print("-----------------------------")
