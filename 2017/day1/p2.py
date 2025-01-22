@@ -1,4 +1,4 @@
-def p1():
+def p2():
     
     with open("./input.txt") as f:
         for line in f:
@@ -18,5 +18,5 @@ def getSum(captcha):
     return _sum
 
 
-ans = p1()
+ans = p2()
 print(f"solution to the captcha = {ans}")
