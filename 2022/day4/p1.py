@@ -1,3 +1,5 @@
+# Ref: https://adventofcode.com/2022/day/4
+
 def p1():
 
     shifts = [line.replace('\n', '') for line in open("input.txt")]
