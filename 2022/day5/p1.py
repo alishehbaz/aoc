@@ -22,7 +22,7 @@ def p1():
         boxesToMove = getBoxesToBeMoved(stackPileMap, fromStack, boxesToMove)
         addBoxesToStack(stackPileMap, toStack, boxesToMove, crateMoverType)
 
-        return getTopElements(stackPileMap)
+    return getTopElements(stackPileMap)
 
 
 def getBoxesToBeMoved(stackPileMap, fromStack, k):
@@ -46,7 +46,7 @@ def getTopElements(stackPileMap):
 
     topBoxesString = ''
 
-    for value in stackPileMap.values():
+    for key, value in stackPileMap.items():
         topBoxesString += value[-1]
 
     return topBoxesString
