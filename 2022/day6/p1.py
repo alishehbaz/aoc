@@ -1,9 +1,8 @@
 def p1():
 
-    lines = [line.strip() for line in open("./input.txt")]
-    print(lines)
+    lines = open("./input.txt").readline()
 
-    print(getStartingMarker(lines, 4))
+    return getStartingMarker(lines, 4)
 
 
 def getStartingMarker(signal, uniqueCharMarker):
@@ -18,4 +17,4 @@ def getStartingMarker(signal, uniqueCharMarker):
 
 
 ans = p1()
-print(f'ans = {ans}')
+print(f'{ans} characters need to be processed before the first start-of-packet marker is detected ')
