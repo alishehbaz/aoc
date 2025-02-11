@@ -3,7 +3,7 @@
 import hashlib
 
 
-def p1():
+def p2():
     puzzleInput = "ckczppom"
 
     for i in range(10000000):
@@ -15,7 +15,7 @@ def p1():
             return i
 
 
-ans = p1()
+ans = p2()
 print(
     f"lowest number (when appended to the puzzle string) to produce a hash starting with six zeroes = {ans}"
 )
