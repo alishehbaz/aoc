@@ -1,18 +1,10 @@
 # Ref: https://adventofcode.com/2015/day/4
-
-import hashlib
+from solution import getLowestNumber
 
 
 def p2():
-    puzzleInput = "ckczppom"
 
-    for i in range(10000000):
-        toBeHashed = puzzleInput + str(i)
-
-        md5Hash = hashlib.md5(toBeHashed.encode("utf-8")).hexdigest()
-
-        if md5Hash[:6] == "000000":
-            return i
+    return getLowestNumber("ckczppom", 0, 10000000, 6)
 
 
 ans = p2()
